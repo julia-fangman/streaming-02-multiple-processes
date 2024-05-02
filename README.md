@@ -1,14 +1,14 @@
 # streaming-02-multiple-processes
 ## Github link: https://github.com/julia-fangman/streaming-02-multiple-processes 
 
-> Multiple processes accessing a shared resource concurrently
-
 ## Overview
+In this project, we'll look at what happens with concurrent processes are accessing a shared resource.  A shared resource could be a SQLite database, a queue (first-in, first-out, like a grocery store line), a deque ("deck") if working with sliding time windows (which we'll do later), an office printer, or more. 
 
-This example starts a shared database and multiple processes.
-
-The processes represent multiple users, or locations, or programs 
-hitting a shared database at the same time. 
+I also:
+review how one multiprocessing example behaves when tasks are quick and sharing goes well (generally),
+change to using longer-running concurrent tasks and explore what happens,
+implement a scaffolded process that streams from a csv file, &
+write my own streaming process that reads from a unique csv data source of my choice. 
 
 ## Prerequisites
 
@@ -60,32 +60,12 @@ Execute 00_check_core.py to generate useful information.
 
 Execute multiple_processes.py.
 
-Read the output. Read the code. 
-Try to figure out what's going on. 
-
-1. What libraries did we import?
-1. Where do we set the TASK_DURATION_SECONDS?
-1. How many functions are defined? 
-1. What are the function names? 
-1. In general, what does each function do? 
-1. Where does the execution begin? Hint: generally at the end of the file.
-1. How many processes do we start?
-1. How many records does each process insert?
-
-In this first run, we start 3 processes, 
-each inserting 2 records into a shared database 
-(for a total of 6 records inserted.)
-
-In each case, the process gets a connection to the database, 
-and a cursor to execute SQL statements.
-It inserts a record, and exits the database quickly.
-
 In general, we're successful and six new records get inserted. 
 
 ## Task 6. Execute Multiple Processes Script with Longer Tasks
 
 For the second run, modify the task duration to make each task take 3 seconds. 
-Hint: Look for the TODO.
+Hint: TODO.
 Run the script again. 
 With the longer tasks, we now get into trouble - 
 one process will have the database open and be working on it - 
@@ -105,16 +85,7 @@ Use out0.txt to document the first run.
 Use out3.txt to document the second run.
 
 
------
-
-
 ### Select All, Copy, Paste
-
-On Windows the select all, copy, paste hotkeys are:
-
-- CTRL a 
-- CTRL c 
-- CTRL v 
 
 On a Mac the select all, copy, paste hotkeys are:
 
@@ -122,19 +93,6 @@ On a Mac the select all, copy, paste hotkeys are:
 - Command c
 - Command v
 
-Detailed copy/paste instructions (as needed)
-
-1. To use these keys to transfer your output into a file, 
-clear the terminal, run the script, then click in the terminal to make it active.
-1. To select all terminal content, hold CTRL and the 'a' key together. 
-1. To copy the selected content, hold CTRL and the 'c' key together. 
-1. To paste, open the destination file (e.g. out0.py) for editing.
-1. Click somewhere in the destination file to make it the active window.
-1. Now hit CTRL a (both together) to select all of the destination file.
-1. Hit CTRL v (both together) to paste the content from your clipboard.
-
-Do a web search to find helpful videos on anything that seems confusing
-and share them in our discussion.
 
 ### Reading Error Messages
 
