@@ -2,9 +2,6 @@
 
 Streaming Process: Uses port 9999
 
-Create a fake stream of data. 
-Use temperature data from the batch process.
-
 Reverse the order of the rows to read OLDEST data first.
 
 """
