@@ -195,3 +195,4 @@ if __name__ == "__main__":
     if TASK_DURATION_SECONDS == 0:
         logging.info(SUCCESS_MESSAGE)
    
+
