@@ -1,4 +1,5 @@
 # streaming-02-multiple-processes
+## Github link: https://github.com/julia-fangman/streaming-02-multiple-processes 
 
 > Multiple processes accessing a shared resource concurrently
 
@@ -15,6 +16,29 @@ hitting a shared database at the same time.
 1. Python 3.7+ (3.11+ preferred)
 1. VS Code Editor
 1. VS Code Extension: Python (by Microsoft)
+
+
+## Julia's Machine: 
+ Welcome to the Python Debugging Information Utility ABOUT.PY
+ Date and Time: 2024-05-02 at 10:33 AM
+ Operating System: posix Darwin 23.4.0
+ System Architecture: 64bit
+ Number of CPUs: 4
+ Machine Type: x86_64
+ Python Version: 3.12.2
+ Python Build Date and Compiler: v3.12.2:6abddd9f6a with Feb  6 2024 17:02:06
+ Python Implementation: CPython
+ Active pip environment: None
+ Path to Interpreter:         /usr/local/bin/python3
+ Path to virtual environment: /Library/Frameworks/Python.framework/Versions/3.12
+ Current Working Directory:   /Users/juliafangman/Documents/streaming-02-multiple-processes
+ Path to source directory:    /Users/juliafangman/Documents/streaming-02-multiple-processes/streaming-02-multiple-processes
+ Path to script file:         /Users/juliafangman/Documents/streaming-02-multiple-processes/streaming-02-multiple-processes/about.py
+ User's Home Directory:       /Users/juliafangman
+ Terminal Environment:        VS Code
+ Terminal Type:               zsh
+ Git available in PATH:       True 
+
 
 ## Task 1. Fork 
 
@@ -83,9 +107,6 @@ Use out3.txt to document the second run.
 
 -----
 
-## Helpful Information
-
-To get more help on the early tasks, see [streaming-01-getting-started](https://github.com/denisecase/streaming-01-getting-started).
 
 ### Select All, Copy, Paste
 
